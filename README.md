@@ -9,13 +9,13 @@ Computers don’t understand letters, so they store text as numbers (which are t
 
 Base64 is a way to convert data into text using only letters, numbers, and a few symbols (+ and /).
 
-**Why Use Base64?**
-Computers work with binary (0s and 1s), but humans prefer text. Some systems (like emails, URLs, and JSON) don’t allow raw binary data. Base64 encodes binary into a safe text format.
+**Why Use Base64?** <br>
+Computers work with binary (0s and 1s), but humans prefer text. Some systems (like emails, URLs, and JSON) don’t allow raw binary data. Base64 encodes binary into a safe text format. <br>
 
-Base64 Uses Only 64 Character
-A  6-bit number can represent 64 different values (from 0 to 63).
-These values map directly to the 64 Base64 characters (A-Z, a-z, 0-9, +, /)
-Base64 has 64 characters → Needs 6-bit encoding (since 2⁶ = 64). Splitting into 6-bit chunks makes conversion between text & Base64 seamless. 3 bytes (24 bits) → 4 Base64 characters (4 × 6 = 24 bits), keeping everything aligned.
+Base64 Uses Only 64 Character<br>
+A  6-bit number can represent 64 different values (from 0 to 63).<br>
+These values map directly to the 64 Base64 characters (A-Z, a-z, 0-9, +, /)<br>
+Base64 has 64 characters → Needs 6-bit encoding (since 2⁶ = 64). Splitting into 6-bit chunks makes conversion between text & Base64 seamless. 3 bytes (24 bits) → 4 Base64 characters (4 × 6 = 24 bits), keeping everything aligned.<br>
 
 
 **ENCODING**
@@ -58,7 +58,12 @@ Then 8 bit binary into decimal
 And then decimal to character (using char)
 
 
+
+
+
  
+<img width="666" alt="Screenshot 2025-02-20 at 10 55 17 PM" src="https://github.com/user-attachments/assets/2670c03f-11b8-414a-bfdb-8b142df44971" />
+
 
 
  
