@@ -15,27 +15,29 @@ Computers work with binary (0s and 1s), but humans prefer text. Some systems (
 Base64 Uses Only 64 Character<br>
 A  6-bit number can represent 64 different values (from 0 to 63).<br>
 These values map directly to the 64 Base64 characters (A-Z, a-z, 0-9, +, /)<br>
-Base64 has 64 characters → Needs 6-bit encoding (since 2⁶ = 64). Splitting into 6-bit chunks makes conversion between text & Base64 seamless. 3 bytes (24 bits) → 4 Base64 characters (4 × 6 = 24 bits), keeping everything aligned.<br>
+Base64 has 64 characters → Needs 6-bit encoding (since 2⁶ = 64).<br>
+Splitting into 6-bit chunks makes conversion between text & Base64 seamless. <br>
+3 bytes (24 bits) → 4 Base64 characters (4 × 6 = 24 bits), keeping everything aligned.<br>
 
 
 **ENCODING**
 
-Converting string into ASCII then to binary of 8 bits 
-ord(i) converts each character i in the string s to its ASCII value 
-format(..., '08b') converts the ASCII value to an 8-bit binary string
+Converting string into ASCII then to binary of 8 bits <br>
+ord(i) converts each character i in the string s to its ASCII value <br>
+format(..., '08b') converts the ASCII value to an 8-bit binary string <br>
 
-then combine it together as a long string 
-and then split it into 6 bits 
-If the long string is not a multiple of 6 then add padding
+then combine it together as a long string <br>
+and then split it into 6 bits <br>
+If the long string is not a multiple of 6 then add padding<br>
 
- base64_encoded = "" → Initializes an empty string to store the final Base64-encoded output.  
- for i in range(0, len(binary_string), 6): → Loops through binary_string in steps of 6 bits at a time.  
- chunk = binary_string [i:i+6] → Extracts a 6-bit segment from binary_string starting at index i.  
- decimal_value = int(chunk, 2)→ Converts the 6-bit binary chunk into a decimal number (Base 10). 
- int(string, base) interprets the string in the given base (2 for binary, 16 for hex, etc.).
-base64_encoded += BASE64_CHARS[decimal_value] → Finds the corresponding Base64 character using decimal_value as an index in BASE64_CHARS and appends it to base64_encoded. 
+ base64_encoded = "" → Initializes an empty string to store the final Base64-encoded output.<br>  
+ for i in range(0, len(binary_string), 6): → Loops through binary_string in steps of 6 bits at a time.<br>  
+ chunk = binary_string [i:i+6] → Extracts a 6-bit segment from binary_string starting at index i. <br> 
+ decimal_value = int(chunk, 2)→ Converts the 6-bit binary chunk into a decimal number (Base 10). <br>
+ int(string, base) interprets the string in the given base (2 for binary, 16 for hex, etc.).<br>
+base64_encoded += BASE64_CHARS[decimal_value] → Finds the corresponding Base64 character using decimal_value as an index in BASE64_CHARS and appends it to base64_encoded. <br>
 
-Add padding if needed (Base64 output must be a multiple of 4 characters) "="
+Add padding if needed (Base64 output must be a multiple of 4 characters) "=" <br>
 
 
 **DECODING** 
