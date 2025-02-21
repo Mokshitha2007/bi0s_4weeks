@@ -26,6 +26,13 @@ Converting string into ASCII then to binary of 8 bits <br>
 ord(i) converts each character i in the string s to its ASCII value <br>
 format(..., '08b') converts the ASCII value to an 8-bit binary string <br>
 
+In format(ord(char), '08b'), the 08b format specifier means:<br>
+
+0 → Pads with leading zeros (if necessary).<br>
+8 → Ensures the output is always 8 bits long.<br>
+b → Converts the number to binary representation.<br>
+
+
 then combine it together as a long string <br>
 and then split it into 6 bits <br>
 If the long string is not a multiple of 6 then add padding<br>
