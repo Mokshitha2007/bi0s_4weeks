@@ -9,6 +9,9 @@ Computers don’t understand letters, so they store text as numbers (which are t
 
 Base64 is a way to convert data into text using only letters, numbers, and a few symbols (+ and /).
 
+
+**Base64 is a way to encode data using only letters, numbers, and a few symbols (+, /, =). It helps store or send data safely, especially over text-based systems like emails or URLs, by converting binary data into a readable format.**
+
 **Why Use Base64?** <br>
 Computers work with binary (0s and 1s), but humans prefer text. Some systems (like emails, URLs, and JSON) don’t allow raw binary data. Base64 encodes binary into a safe text format. <br>
 
