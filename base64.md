@@ -82,9 +82,12 @@ base64_encoded += BASE64_CHARS[decimal_value] → Finds the corresponding Base64
 
 
 ABCDEFGHIJKLMNOPQRSTUVWXYZ  (26 uppercase letters)<br>
+
 abcdefghijklmnopqrstuvwxyz  (26 lowercase letters)<br>
+
 0123456789                  (10 digits)<br>
-+ /                         (2 special symbols)<br>
+
+(+, /)                      (2 special symbols)<br>
 
 
 Add padding if needed (Base64 output must be a multiple of 4 characters) "=" <br>
