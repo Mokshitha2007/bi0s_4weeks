@@ -26,12 +26,14 @@ Splitting into 6-bit chunks makes conversion between text & Base64 seamless. <
 Converting string into ASCII then to binary of 8 bits <br> 
 
 
-Character Set	ASCII Range<br>
+**ASCIIII CHARSSSSS!!!!!!!**  <br>
+
+
 Digits (0-9)	48-57<br>
 Uppercase A-Z	65-90<br>
 Lowercase a-z	97-122<br>
 
-**Tricks for Specific Characters**<br>
+
 
 
 **Digits (0-9) → Start at 48**<br>
@@ -75,6 +77,15 @@ If the long string is not a multiple of 6 then add padding<br>
  decimal_value = int(chunk, 2)→ Converts the 6-bit binary chunk into a decimal number (Base 10). <br>
  int(string, base) interprets the string in the given base (2 for binary, 16 for hex, etc.).<br>
 base64_encoded += BASE64_CHARS[decimal_value] → Finds the corresponding Base64 character using decimal_value as an index in BASE64_CHARS and appends it to base64_encoded. <br>
+
+**BASE64 CHARSS!!!!!***<br>
+
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  (26 uppercase letters)<br>
+abcdefghijklmnopqrstuvwxyz  (26 lowercase letters)<br>
+0123456789                  (10 digits)<br>
++ /                         (2 special symbols)<br>
+
 
 Add padding if needed (Base64 output must be a multiple of 4 characters) "=" <br>
 
