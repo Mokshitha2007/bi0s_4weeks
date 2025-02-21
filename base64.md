@@ -22,7 +22,39 @@ Splitting into 6-bit chunks makes conversion between text & Base64 seamless. <
 
 **ENCODING**
 
-Converting string into ASCII then to binary of 8 bits <br>
+
+Converting string into ASCII then to binary of 8 bits <br> 
+
+
+Character Set	ASCII Range<br>
+Digits (0-9)	48-57<br>
+Uppercase A-Z	65-90<br>
+Lowercase a-z	97-122<br>
+
+**Tricks for Specific Characters**<br>
+
+
+**Digits (0-9) → Start at 48**<br>
+'0' = 48, '1' = 49, '2' = 50, … '9' = 57<br>
+**Trick: Add 48 to the digit itself → '3' → 48 + 3 = 51**<br>
+
+
+**Uppercase A-Z → Start at 65**<br>
+'A' = 65, 'B' = 66, 'C' = 67, … 'Z' = 90<br>
+**Trick: 'A' → 65, then add the position in the alphabet → 'E' = 65 + 4 = 69**<br>
+
+
+**Lowercase a-z → Start at 97**<br>
+'a' = 97, 'b' = 98, 'c' = 99, … 'z' = 122<br>
+Trick: 'a' → 97, add the position → 'e' = 97 + 4 = 101<br>
+
+
+Uppercase vs Lowercase Difference<br>
+'a' (97) - 'A' (65) = 32 → The difference between lowercase and uppercase letters is always 32.<br>
+Trick: Lowercase = Uppercase ASCII + 32 ('B' = 66 → 'b' = 98)<br>
+
+
+
 ord(i) converts each character i in the string s to its ASCII value <br>
 format(..., '08b') converts the ASCII value to an 8-bit binary string <br>
 
